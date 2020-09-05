@@ -47,9 +47,11 @@ $.ajax({
 
         //Get icon
         var icon = data.weather[0].icon;
+        //alert(icon)
+        $('#imgthumb').attr('src','https://openweathermap.org/img/wn/'+icon+'@4x.png');
         //$('.icon').html(icon);
 
-                 switch (icon)
+                 /*switch (icon)
                   {
                
                case '01d': document.getElementById("imgthumb").src = "https://ssl.gstatic.com/onebox/weather/256/sunny.png";
@@ -88,7 +90,7 @@ $.ajax({
 
                default:  document.getElementById("imgthumb").src = "http://nextlink.5gbfree.com/graphweather/images/notavailable.png";
             }    
-
+*/
     }
     });
       //showdata()
@@ -122,5 +124,5 @@ function fetchquote_wallpaper(){
 
 function display_input(){
 
-  $('.input_box').css("display","block");
+  $('.input_box').toggle();
 }
